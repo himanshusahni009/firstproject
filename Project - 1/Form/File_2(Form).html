@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webiste | Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Website | Forms">
+</head>
+<body>
+    <section>
+        <h1>Sign Up/Join Form </h1>
+    </section>
+    <form>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="first_name" placeholder="First Name" required><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="last_name" placeholder="Last Name" required><br>
+            <label>Choose Your Gender</label><br>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br>
+            <label for="fav_option">Your Favourite</label>
+            <select id="fav_option" name="favourites">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select><br>
+            <label>Your Choices</label><br>
+            <input type="checkbox" id="choice1" name="choice_1" value="Choice 1">
+            <label for="choice1">Choice 1</label><br>
+            <input type="checkbox" id="choice2" name="choice_2" value="Choice 2">
+            <label for="choice2">Choice 2</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Login Credential Data</legend>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" maxlength="15" placeholder="Maximum 15 Characters" required><br>
+            <label for="pwd">Password</label><br>
+            <input type="password" id="pwd" name="pwd" placeholder="Password (Upto 12 Characters)" maxlength="12" size="30" required><br>
+            <label for="re_pwd">Re-Type Password</label><br>
+            <input type="password" id="re_pwd" name="re_pwd" placeholder="Re-Password (Upto 12 Characters)" maxlength="12" size="30" required><br>
+            <label for="e-mail">Enter Your E-Mail Address</label><br>
+            <input type="email" id="e-mail" name="e-mail" placeholder="E-Mail" required><br>
+            <label for="tel">Enter Your Phone Number</label><br>
+            <input type="tel" id="tel" name="tel" placeholder="+91-0123456789" required><br>
+            <label for="security_quest">Choose a Security Question</label>
+            <select id="security_quest" name="security_quest">
+                <option value="quest1">Question 1 </option>
+                <option value="quest2">Question 2</option>
+                <option value="quest3">Question 3</option>
+            </select><br>
+            <label for="favcolor">Choose Your Favourite Color</label>
+            <input type="color" id="favcolor" name="favcolor"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Other Data</legend>
+            <label for="date_birth">Enter Date of Birth : </label>
+            <!-- Here Date Restrictions is added -->
+            <input type="date" id="date_birth" name="date_birth" min="1994-12-31" max="2000-01-01"><br>
+            <label for="birthdaytime">Enter Date and Time Precision</label>
+            <input type="datetime-local" id="birthdaytime" name="birthdaytime"><br>
+            <label for="myfile">Choose File to Upload</label><br>
+            <input type="file" id="myfile" name="myfile"><br>
+            <label for="quantity">Enter Quantity (Between 1 and 12):</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="12" required><br>
+            <label for="rating">How you Rate our Website (Between 0 and 100): </label>
+            <input type="range" id="rating" name="rating" min="0" max="100" step="10"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Feedback</legend>
+            <label>Feel Free to give feedback</label><br>
+            <textarea style="width: 500px; height: 200px;" placeholder="Type Here..."></textarea><br>
+        </fieldset>
+        <input type="submit" value="Sumbit using GET" formmethod="GET" >
+        <input type="submit" value="Submit using POST" formmethod="POST" title="Submit using POST">
+        <input type="reset">
+    </form>
+</body>
+</html>
